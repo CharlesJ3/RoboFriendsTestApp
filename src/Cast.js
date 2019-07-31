@@ -101,7 +101,7 @@ export default class Cast extends React.Component {
                   <div>
                     <p key={index+name} className="bg-black pa3 mr2 bold tc">{`Actor: ${name}`}<br />
                     <span className="bigGrowth">{`Character: ${character}`}</span></p>
-                    <img key={index+character} alt={name} width="25%" max-width="300px" src={x} />
+                    <img key={index+character} alt={name} className="frontImage cardInfoBorderFull" src={x} />
                   </div>
                 </div>
 
@@ -110,12 +110,12 @@ export default class Cast extends React.Component {
 
                   {/* generate quote from list of quotes */}
                   <p id={character.substring(0,3) + index}></p>
-                  <h3 className="pa3">
+                  <h2 className="pa3">
                     { 
                       this.setQuote(index)
                     }
-                  </h3>
-                  <h1>{`- ${character}`}</h1>
+                  </h2>
+                  <h3>{`-${character}`}</h3>
                 </div>
               </div>
             </div>

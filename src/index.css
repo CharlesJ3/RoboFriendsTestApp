@@ -30,6 +30,24 @@
   }
 }
 
+@keyframes flowRight {
+  0%  { 
+    transform: translate3d(-5vw, 0, 0);
+  }
+
+  40% { 
+    transform: translate3d(-3vw, 0, 0);
+
+  }
+
+  99%  { 
+    transform: translate3d(-1vw, 0, 0);
+  }
+  100%  { 
+    transform: translate3d(-5vw, 0, 0);
+  }
+}
+
 @keyframes backgroundAnimateColor {
   0%  { 
     background-color: black;
@@ -85,6 +103,21 @@
   100%  { 
     transform: translate3d(-50px, 0, 0);
 
+  }
+}
+
+@keyframes borderFunTwo {
+  0%  { 
+    background-position-x: -10px;
+  }
+
+  50% { 
+    background-position-x: 10px;
+
+  }
+
+  100%  { 
+    background-position-x: -10px;
   }
 }
 
@@ -168,6 +201,10 @@ code {
   border-bottom: 3px solid rgb(70, 51, 153);
 }
 
+.cardInfoBorderFull {
+  border: 2px solid navy;
+}
+
 .flip-card {
   background-color: transparent;
   perspective: 100vh;
@@ -215,26 +252,31 @@ code {
 #Den0 {
   background: url('./img/dennis.PNG');
   background-position: center;
+  animation: borderFunTwo linear 5s infinite;
 }
 
 #Cha1 {
   background: url('./img/charlie.PNG');
   background-position: center;
+  animation: borderFunTwo linear 5s infinite;
 }
 
 #Dea2 {
   background: url('./img/deandra.PNG');
   background-position: center;
+  animation: borderFunTwo linear 5s infinite;
 }
 
 #Fra3 {
   background: url('./img/frank.PNG');
   background-position: center;
+  animation: borderFunTwo linear 5s infinite;
 }
 
 #Ron4 {
   background: url('./img/ronald.PNG');
   background-position: center;
+  animation: borderFunTwo linear 5s infinite;
 }
 
 #Den0, #Cha1, #Dea2, #Fra3, #Ron4 {
@@ -245,4 +287,64 @@ code {
   z-index: -2;
   border: 2px solid navy;
   clip-path: circle(60.4% at 49% 27%);
+}
+
+.frontImage {
+  width: 30%;
+  height: 50%;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 900px) {
+  h1, h2, h3 {
+    font-size: 14px !important;
+  }
+  
+  p {
+    font-size: 12px;
+  }
+  .quoteText {
+    font-size: 8px;
+  }
+
+  .frontImage {
+    width: 80%;
+    height: 50%;
+  }
+
+  .pa3 {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 14px !important;
+  }
+  
+  p {
+    font-size: 12px;
+  }
+  .quoteText {
+    font-size: 8px;
+  }
+
+  .frontImage {
+    width: 90%;
+    height: 50%;
+  }
+
+  .pa3 {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .frontImage {
+    width: 60%;
+    height: 50%;
+  }
+
 }
