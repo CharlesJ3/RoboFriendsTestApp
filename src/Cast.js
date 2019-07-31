@@ -66,8 +66,6 @@ export default class Cast extends React.Component {
 
   setQuote(index) {
 
-    console.log(this.state.setquoteSelection);
-
     return index === 0 ? this.state.quotesDennis[this.state.quoteSelection] : 
     index === 1 ? this.state.quotesCharlie[this.state.quoteSelection] :
     index === 2 ? this.state.quotesDeandra[this.state.quoteSelection] :
@@ -78,12 +76,6 @@ export default class Cast extends React.Component {
   render() {
     return (
       <div className="tc bg-alice-blue">
-
-        {/* Header - TODO: Change to  */}
-        <div className="backgroundAnimateColor tc header">
-          <h2 className="tc smallGrowth white borderBright">Always <strike>S</strike>FUNNY! - Random Quote!</h2>
-          <h3 className="tc bigGrowth white borderBright">Hover over a card to reveal a random quote!</h3>
-        </div>
 
         {/* Character Cards */}
         <div className="flex flex-wrap justify-center tc" onMouseEnter={this.updateQuote}>
@@ -110,12 +102,12 @@ export default class Cast extends React.Component {
 
                   {/* generate quote from list of quotes */}
                   <p id={character.substring(0,3) + index}></p>
-                  <h2 className="pa3">
+                  <h3 className="pa3">
                     { 
                       this.setQuote(index)
                     }
-                  </h2>
-                  <h3>{`-${character}`}</h3>
+                  </h3>
+                  <h4>{`-${character}`}</h4>
                 </div>
               </div>
             </div>
