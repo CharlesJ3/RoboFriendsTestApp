@@ -164,8 +164,8 @@ code {
 
 .cardInfoBorder {
   border-top: 3px solid navy;
-  border-right: 3px solid mediumpurple;
-  border-bottom: 3px solid rebeccapurple;
+  border-right: 3px solid rgb(44, 19, 92);
+  border-bottom: 3px solid rgb(70, 51, 153);
 }
 
 .flip-card {
@@ -212,18 +212,37 @@ code {
   background-color: lightsteelblue;
 }
 /* Character Images */
-#Cha1 {
-  background: url('./img/charlieeyes.PNG');
+#Den0 {
+  background: url('./img/dennis.PNG');
+  background-position: center;
+}
 
+#Cha1 {
+  background: url('./img/charlie.PNG');
+  background-position: center;
+}
+
+#Dea2 {
+  background: url('./img/deandra.PNG');
+  background-position: center;
+}
+
+#Fra3 {
+  background: url('./img/frank.PNG');
+  background-position: center;
+}
+
+#Ron4 {
+  background: url('./img/ronald.PNG');
+  background-position: center;
 }
 
 #Den0, #Cha1, #Dea2, #Fra3, #Ron4 {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
-  height: 25%;
+  height: 35%;
   width: 100%;
   z-index: -2;
-  border: 1px solid white;
+  border: 2px solid navy;
   clip-path: circle(60.4% at 49% 27%);
 }
