@@ -65,11 +65,12 @@
 
 @keyframes backgroundAnimateColorClip {
   0%  { 
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
   }
 
   20% { 
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0% 20%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
+
 
   }
 
@@ -86,7 +87,7 @@
   }
 
   100%  { 
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
   }
 }
 
@@ -222,6 +223,7 @@ code {
 
 .backgroundAnimateColor {
   animation: backgroundAnimateColorClip ease-out 5s infinite;
+  animation-delay: .5s;
   background-color: black;
 }
 
@@ -246,9 +248,21 @@ code {
 }
 
 .bg-alice-blue {
-  background-color: lightsteelblue;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,efdc62+0,afd0ff+100 */
+background: #fefcea; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #fefcea 0%, #efdc62 0%, #afd0ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #fefcea 0%,#efdc62 0%,#afd0ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #fefcea 0%,#efdc62 0%,#afd0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#afd0ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
-/* Character Images */
+
+/* Cast Images */
+.teamBG {
+  background: url('./img/fullteam.jpg');
+  background-position: center;
+}
+
 #Den0 {
   background: url('./img/dennis.PNG');
   background-position: center;

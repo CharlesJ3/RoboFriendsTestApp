@@ -24,16 +24,16 @@ export default class Cast extends React.Component {
       this.setState({
         res1: res.cast,
         quotesDennis: [
-          `I am a golden god!`,
-          `Without the sunglasses, Weekend at Bernie's would have been a very dark, strange tale.`,
-          `So, all for thinner limes, raise your hands. And all for thicker limes, raise your hands. Now, there you go. That's a democracy in action. That's two votes against two votes. A perfect example of when democracy has failed.`,
-          `My nose was chiseled by the gods themselves, Frank. My body was sculpted to the proportions of Michaelango's "David". You, on the other hand, are a pit of despair. `,
+          `"I am a golden god!"`,
+          `"Without the sunglasses, Weekend at Bernie's would have been a very dark, strange tale.`,
+          `"So, all for thinner limes, raise your hands. And all for thicker limes, raise your hands. Now, there you go. That's a democracy in action. That's two votes against two votes. A perfect example of when democracy has failed."`,
+          `"My nose was chiseled by the gods themselves, Frank. My body was sculpted to the proportions of Michaelango's "David". You, on the other hand, are a pit of despair."`,
         ],
         quotesCharlie: [
-          `I'll just regress, because I feel I've made myself perfectly redundant.`,
-          `Aw yeah, yeah, like in The Sixth Sense you find out that the dude in that hair piece the whole time, that's Bruce Willis the whole movie.`,
-          `Just get a job? Why don’t I strap on my job helmet, and squeeze down into a job cannon, AND FIRE OFF INTO JOBLAND, WHERE JOBS GROW ON JOBBIES?!!!`,
-          `Keep singing, bitch! You're not gonna have a face by the time I'm through with you!`,
+          `"I'll just regress, because I feel I've made myself perfectly redundant.`,
+          `"Aw yeah, yeah, like in The Sixth Sense you find out that the dude in that hair piece the whole time, that's Bruce Willis the whole movie."`,
+          `"Just get a job? Why don’t I strap on my job helmet, and squeeze down into a job cannon, AND FIRE OFF INTO JOBLAND, WHERE JOBS GROW ON JOBBIES?!!!"`,
+          `"Keep singing, bitch! You're not gonna have a face by the time I'm through with you!"`,
         ],
         quotesDeandra: [
           `*Ostrich Noises*`,
@@ -42,16 +42,16 @@ export default class Cast extends React.Component {
           `*Ostrich Noises*`,
         ],
         quotesFrank: [
-          `Actually it is Mantis. Mantis Toboggan, MD.`,
-          `I still. Got the. Moooooooooves. Go for it, go for it!`,
-          `Ongo goblogian, the art collector! Charmed, I'm sure! I'm going to invite you to a show, but first, allow me to destroy your gallery.`,
-          `Well, I don't know how many years on this Earth I got left, but I'm gonna get real weird with it.`,
+          `"Actually it is Mantis. Mantis Toboggan, MD.`,
+          `"I still. Got the. Moooooooooves. Go for it, go for it!`,
+          `"Ongo goblogian, the art collector! Charmed, I'm sure! I'm going to invite you to a show, but first, allow me to destroy your gallery."`,
+          `"Well, I don't know how many years on this Earth I got left, but I'm gonna get real weird with it."`,
         ],
         quotesRonald: [
-          `But I'm more healthier than he is, is the point I think you're trying to make, even with the diabitis.`,
-          `People change, Frank. Look at me, I went from a tiny twink, to the muscle-bound freak you see before you.`,
-          `Mark my words, Dennis, there will be a time when I utilize these glasses to assess a threat, and then... are they still standing there?`,
-          `You know what, it turns out I am too muscular and I can't fit through.`,
+          `"But I'm more healthier than he is, is the point I think you're trying to make, even with the diabitis."`,
+          `"People change, Frank. Look at me, I went from a tiny twink, to the muscle-bound freak you see before you."`,
+          `"Mark my words, Dennis, there will be a time when I utilize these glasses to assess a threat, and then... are they still standing there?"`,
+          `"You know what, it turns out I am too muscular and I can't fit through."`,
         ],
       })
     })
@@ -89,7 +89,7 @@ export default class Cast extends React.Component {
               <div className="flip-card-inner tc cardInfoBorder">
 
                 {/* Front Card Details */}
-                <div className="flip-card-front tc bigWaveBGr">
+                <div className="flip-card-front tc bigWaveBG">
                   <div>
                     <p key={index+name} className="bg-black pa3 mr2 bold tc">{`Actor: ${name}`}<br />
                     <span className="bigGrowth">{`Character: ${character}`}</span></p>
