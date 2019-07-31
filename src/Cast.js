@@ -23,7 +23,7 @@ export default class Cast extends React.Component {
           `I am a golden god!`,
           `Without the sunglasses, Weekend at Bernie's would have been a very dark, strange tale.`,
           `So, all for thinner limes, raise your hands. And all for thicker limes, raise your hands. Now, there you go. That's a democracy in action. That's two votes against two votes. A perfect example of when democracy has failed.`,
-          `My nose was chiseled by the god themselves, Frank. My body was scuplted to the proportions of Michaelango's "David". You, on the other hand, are a pit of despair. `,
+          `My nose was chiseled by the gods themselves, Frank. My body was sculpted to the proportions of Michaelango's "David". You, on the other hand, are a pit of despair. `,
         ],
         quotesCharlie: [
           `I'll just regress, because I feel I've made myself perfectly redundant.`,
@@ -50,12 +50,6 @@ export default class Cast extends React.Component {
           `You know what, it turns out I am too muscular and I can't fit through.`,
         ]
       })
-
-
-      // this.state.res1[0]['quotes'] = [];
-      // this.state.res1[0]['quotes'][0] = `I'm Dennis Reynolds 2`;
-      // this.state.res1[0]['quotes'][1] = `I'm Dennis Reynolds 2`;
-      // this.state.res1[0]['quotes'][2] = `I'm Dennis Reynolds 2`;
     })
   }
 
@@ -69,7 +63,7 @@ export default class Cast extends React.Component {
 
   render() {
     return (
-      <div className="tc bg-light-blue">
+      <div className="tc bg-alice-blue">
 
         {/* Header - TODO: Change to  */}
         <div className="backgroundAnimateColor tc header">
@@ -79,7 +73,7 @@ export default class Cast extends React.Component {
 
         {/* Character Cards */}
         <div className="flex flex-wrap justify-center tc">
-          {this.state.res1.map(({ name, character, profile_path, quote }, index) =>{
+          {this.state.res1.map(({ name, character, profile_path }, index) =>{
             const x = `https://image.tmdb.org/t/p/w600_and_h900_bestv2${profile_path}`;
 
             return (
@@ -88,23 +82,27 @@ export default class Cast extends React.Component {
               <div className="flip-card-inner tc">
 
                 {/* Front Card Details */}
-                <div className="flip-card-front tc cardInfoBorder">
-                  <p key={index+name} className="bg-dark-blue pa3 mr2 bold tc smallGrowth">{`Actor: ${name}`}<br />
-                  <span className="bigGrowth smallGrowth">{`Character: ${character}`}</span></p>
-                  <img key={index+character} alt={name} width="25%" max-width="300px" src={x} />
+                <div className="flip-card-front tc bigWaveBG cardInfoBottom">
+                  <div>
+                    <p key={index+name} className="bg-black pa3 mr2 bold tc">{`Actor: ${name}`}<br />
+                    <span className="bigGrowth">{`Character: ${character}`}</span></p>
+                    <img key={index+character} alt={name} width="25%" max-width="300px" src={x} />
+                  </div>
                 </div>
 
                 {/* Back Card Details */}
                 <div className="flip-card-back">
 
                   {/* generate quote from list of quotes */}
+                  <p id={character.substring(0,3) + index}></p>
                   <h3 className="pa3">{ 
                     index === 0 ? this.state.quotesDennis[Math.floor(Math.random() * this.state.quotesDennis.length)] : 
                     index === 1 ? this.state.quotesCharlie[Math.floor(Math.random() * this.state.quotesCharlie.length)] : 
                     index === 2 ? this.state.quotesDeandra[Math.floor(Math.random() * this.state.quotesDeandra.length)] : 
                     index === 3 ? this.state.quotesFrank[Math.floor(Math.random() * this.state.quotesFrank.length)] :
                     index === 4 ? this.state.quotesRonald[Math.floor(Math.random() * this.state.quotesRonald.length)] : ''
-                    }</h3>
+                    }
+                  </h3>
                   <h1>{`- ${character}`}</h1>
                 </div>
               </div>
