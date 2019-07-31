@@ -73,8 +73,8 @@ export default class Cast extends React.Component {
 
         {/* Header - TODO: Change to  */}
         <div className="backgroundAnimateColor tc header">
-          <h2 className="tc smallGrowth white">Always Sunny - Random Quote!</h2>
-          <h3 className="tc bigGrowth white">Hover over a card to reveal a random quote!</h3>
+          <h2 className="tc smallGrowth white borderBright">Always Sunny - Random Quote!</h2>
+          <h3 className="tc bigGrowth white borderBright">Hover over a card to reveal a random quote!</h3>
         </div>
 
         {/* Character Cards */}
@@ -88,9 +88,9 @@ export default class Cast extends React.Component {
               <div className="flip-card-inner tc">
 
                 {/* Front Card Details */}
-                <div className="flip-card-front tc">
-                  <p key={index+name} className="bg-dark-blue pa3 mr2 bold tc">{`Actor: ${name}`}<br />
-                  <span className="bigGrowth">{`Character: ${character}`}</span></p>
+                <div className="flip-card-front tc cardInfoBorder">
+                  <p key={index+name} className="bg-dark-blue pa3 mr2 bold tc smallGrowth">{`Actor: ${name}`}<br />
+                  <span className="bigGrowth smallGrowth">{`Character: ${character}`}</span></p>
                   <img key={index+character} alt={name} width="25%" max-width="300px" src={x} />
                 </div>
 
@@ -98,7 +98,7 @@ export default class Cast extends React.Component {
                 <div className="flip-card-back">
 
                   {/* generate quote from list of quotes */}
-                  <h3>{ 
+                  <h3 className="pa3">{ 
                     index === 0 ? this.state.quotesDennis[Math.floor(Math.random() * this.state.quotesDennis.length)] : 
                     index === 1 ? this.state.quotesCharlie[Math.floor(Math.random() * this.state.quotesCharlie.length)] : 
                     index === 2 ? this.state.quotesDeandra[Math.floor(Math.random() * this.state.quotesDeandra.length)] : 

@@ -30,20 +30,6 @@
   }
 }
 
-@keyframes backgroundFlashRed {
-  0%  { 
-    background-color: red; 
-  }
-
-  40% { 
-    background-color: blue; 
-  }
-
-  100%  { 
-    background-color: red; 
-  }
-}
-
 @keyframes backgroundAnimateColor {
   0%  { 
     background-color: black;
@@ -55,6 +41,22 @@
 
   100%  { 
     background-color: black;
+  }
+}
+
+@keyframes borderFun {
+  0%  { 
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  40% { 
+    transform: translate3d(50px, 0, 0);
+
+  }
+
+  100%  { 
+    transform: translate3d(-50px, 0, 0);
+
   }
 }
 
@@ -84,31 +86,6 @@ code {
   font-weight: bold;
 }
 
-.animateWrap {
-  animation: circleOne linear 5s infinite;
-}
-
-.backgroundFlashRed {
-  animation: backgroundFlashRed linear 5s infinite;
-}
-
-.backgroundAnimateColor {
-  animation: backgroundAnimateColor linear 5s infinite;
-}
-
-.smallGrowth {
-  animation: smallGrowth linear 5s infinite;
-}
-
-.bigGrowth {
-  animation: bigGrowth linear 5s infinite;
-}
-
-.flip-card {
-  background-color: transparent;
-  perspective: 1000px;
-}
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -118,6 +95,10 @@ code {
   transform-style: preserve-3d;
   box-shadow: 0 6px 12px 0 rgba(0,0,0,0.7);
 }
+/* 
+.flip-card:hover {
+  animation: borderFun linear 5s infinite;
+} */
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -151,4 +132,41 @@ code {
 
 .quoteText {
   font-size: 2em;
+}
+
+.cardInfoBorder {
+  border-top: 3px solid navy;
+  border-right: 3px solid mediumpurple;
+  border-bottom: 3px solid rebeccapurple;
+}
+
+.flip-card {
+  background-color: transparent;
+  perspective: 60vh;
+}
+
+.borderBright {
+  text-shadow: 2px 2px 2px navy;
+}
+
+/* Animations */
+
+.animateWrap {
+  animation: circleOne linear 5s infinite;
+}
+
+.backgroundAnimateColor {
+  animation: backgroundAnimateColor linear 5s infinite;
+}
+
+.smallGrowth {
+  animation: smallGrowth linear 5s infinite;
+}
+
+.bigGrowth {
+  animation: bigGrowth linear 5s infinite;
+}
+
+.fun {
+  animation: borderFun linear 5s infinite;
 }
