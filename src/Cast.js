@@ -44,10 +44,10 @@ export default class Cast extends React.Component {
           `Well, I don't know how many years on this Earth I got left, but I'm gonna get real weird with it.`,
         ],
         quotesRonald: [
-          `But I'm more healthier than he is, is the point I think you're trying to make, even with the diabitis`,
-          `2 -R`,
-          `3 -R`,
-          `4 -R`,
+          `But I'm more healthier than he is, is the point I think you're trying to make, even with the diabitis.`,
+          `People change, Frank. Look at me, I went from a tiny twink, to the muscle-bound freak you see before you.`,
+          `Mark my words, Dennis, there will be a time when I utilize these glasses to assess a threat, and then... are they still standing there?`,
+          `You know what, it turns out I am too muscular and I can't fit through.`,
         ]
       })
 
@@ -71,7 +71,7 @@ export default class Cast extends React.Component {
     return (
       <div className="tc bg-light-blue">
 
-        {/* Header - TODO: Change to Props */}
+        {/* Header - TODO: Change to  */}
         <div className="backgroundAnimateColor tc header">
           <h2 className="tc smallGrowth white">Always Sunny - Random Quote!</h2>
           <h3 className="tc bigGrowth white">Hover over a card to reveal a random quote!</h3>
