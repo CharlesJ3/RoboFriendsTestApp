@@ -66,11 +66,11 @@ export default class Cast extends React.Component {
 
   setQuote(index) {
 
-    return index === 0 ? this.state.quotesDennis[this.state.quoteSelection] : 
-    index === 1 ? this.state.quotesCharlie[this.state.quoteSelection] :
-    index === 2 ? this.state.quotesDeandra[this.state.quoteSelection] :
-    index === 3 ? this.state.quotesFrank[this.state.quoteSelection] :
-    index === 4 ? this.state.quotesRonald[this.state.quoteSelection] : ''
+    return index === 0 ? this.state.quotesCharlie[this.state.quoteSelection] :
+    index === 1 ? this.state.quotesDennis[this.state.quoteSelection] :
+    index === 2 ? this.state.quotesRonald[this.state.quoteSelection] :
+    index === 3 ? this.state.quotesDeandra[this.state.quoteSelection] :
+    index === 4 ? this.state.quotesFrank[this.state.quoteSelection] : ''
   }
 
   render() {
@@ -103,7 +103,7 @@ export default class Cast extends React.Component {
                   {/* generate quote from list of quotes */}
                   <p id={character.substring(0,3) + index}></p>
                   <h3 className="pa3">
-                    { 
+                    {
                       this.setQuote(index)
                     }
                   </h3>
